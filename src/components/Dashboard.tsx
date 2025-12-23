@@ -19,7 +19,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ username, onPlay, onLogout
 
   const fetchProfile = async () => {
     try {
-      const res = await fetch(`http://localhost:8082/api/profile?username=${username}`);
+      const res = await fetch(`https://connect4server.onrender.com/api/profile?username=${username}`);
       if (res.ok) {
         const data = await res.json();
         setStats(data);

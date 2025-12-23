@@ -75,7 +75,7 @@ function App() {
     console.log("Attempting to connect with user:", username);
 
     // Pass token in query param or header.
-    const wsUrl = `ws://localhost:8082/ws?token=${encodeURIComponent(token)}&username=${encodeURIComponent(username)}`;
+    const wsUrl = `wss://connect4server.onrender.com/ws?token=${encodeURIComponent(token)}&username=${encodeURIComponent(username)}`;
     console.log("Connecting to:", wsUrl);
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;

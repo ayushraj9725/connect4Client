@@ -9,7 +9,7 @@ export const Leaderboard: React.FC = () => {
   const [players, setPlayers] = useState<Player[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:8082/api/leaderboard')
+    fetch('https://connect4server.onrender.com/api/leaderboard')
       .then(res => res.json())
       .then(data => setPlayers(data || [])) // Handle potential null
       .catch(err => console.error("Failed to fetch leaderboard", err));
